@@ -1,98 +1,33 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    
-        <title>Yu Lei</title>
-    
-
-    <meta name="description" content="Wuhan University">
-
-    
-
-    <link rel="icon" href="/assets/img/favicon.png">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
-        });
-    </script>
-    <script type="text/javascript"
-   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
-</script>
-<!--    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>-->
-</head>
-
-<body>
-
-    <div class="wrapper">
-        
-<div class="header">
-    <h1>Yu Lei</h1>
-    <ul>
-        
-        <li>
-            <a href="/">Home</a>
-        </li>
-        
-        <li>
-            <a href="/me">About</a>
-        </li>
-        
-        <li>
-            <a href="/pub">Publications</a>
-        </li>
-        
-        <li>
-            <a href="mailto:yuleiwhu@gmail.com">Contact</a>
-        </li>
-        
-        <li>
-            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=Klc_GHUAAAAJ">Google Citations</a>
-        </li>
-        
-    </ul>
-</div>
-
+{% include header.html %}
 
 <div class="portfolio">
     <!-- <h1>Web Design:</h1> -->
     <ul>
-        <!-- 
+        <!-- {% for websites in site.data.websites %}
         <li>
-            <a href="http://gif-giving.com">Gif-Giving</a>
+            <a href="{{ websites.url }}">{{ websites.name }}</a>
         </li>
-        
-        <li>
-            <a href="http://sherikoetting.com">Sheri Koetting</a>
-        </li>
-        
-        <li>
-            <a href="http://getpeppers.com">GetPeppers</a>
-        </li>
-         -->
-        <li>Associate Professor </li>
+        {% endfor %} -->
+        <li>{{site.title}} </li>
 
         <li>
-          <a href="http://eis.whu.edu.cn">Electronic and Information School</a>
+          <a href="http://eis.whu.edu.cn">{{site.school}}</a>
         </li>
 
         <li>
-          <a href="http://www.whu.edu.cn">Wuhan University</a>
+          <a href="http://www.whu.edu.cn">{{site.affiliation}}</a>
         </li>
 
         <li>
-          <a href="#"></a>Luojia Shan, Wuchang, 430072 Wuhan, Hubei, China
+          <a href="#"></a>{{site.address}}
         </li>
 
         <li>
-          <a href="mailto:ly.wd@whu.edu.cn">ly.wd@whu.edu.cn</a>
+          <a href="mailto:{{site.email}}">{{site.email}}</a>
         </li>
 
         <!-- <li><a href="http://sites.google.com/site/link2yulei/">Old WebPage</a></li> -->
@@ -102,55 +37,21 @@
 <div class="project">
     <h1>Projects:</h1>
     <ul>
-        
+        {% for projects in site.data.projects %}
         <li>
-            Fatso
+            {{ projects.name }}
         </li>
-        
-        <li>
-            Beam
-        </li>
-        
+        {% endfor %}
     </ul>
 </div>
 
 <div class="blog">
     <h1>Blog Posts:</h1>
     <ul>
-        
+        {% for post in site.posts %}
         <li>
-            <span class="date">2016 May 18</span> - <a href="/2016/05/18/recurrent-neural-networks-tutorial.html">Recurrent Neural Networks Tutorial</a>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
-        
-        <li>
-            <span class="date">2016 May 07</span> - <a href="/2016/05/07/20160909this.html">2016-09-09-this</a>
-        </li>
-        
-        <li>
-            <span class="date">2016 May 02</span> - <a href="/2016/05/02/passing-args-in-bash.html">Passing Arguments in Shell Script</a>
-        </li>
-        
-        <li>
-            <span class="date">2016 Apr 24</span> - <a href="/2016/04/24/what-the-rice.html">What the Rice?</a>
-        </li>
-        
-        <li>
-            <span class="date">2016 Mar 26</span> - <a href="/2016/03/26/arch-linux.html">Arch Linux is Cool</a>
-        </li>
-        
-        <li>
-            <span class="date">2016 Mar 17</span> - <a href="/2016/03/17/web-dev-tips.html">Web Development Tips for Beginners</a>
-        </li>
-        
-        <li>
-            <span class="date">2016 Mar 10</span> - <a href="/2016/03/10/ghost-to-jekyll.html">Why I Switched from Ghost to Jekyll</a>
-        </li>
-        
+        {% endfor %}
     </ul>
 </div>
-
-    </div>
-
-</body>
-
-</html>

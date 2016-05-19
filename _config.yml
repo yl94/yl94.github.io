@@ -1,0 +1,40 @@
+# Site settings
+timezone: Europe/Berlin
+
+# 多语言设置
+gems: ['jekyll-paginate','jekyll-multiple-languages']
+
+
+# My variables
+name: Yu Lei
+school: Electronic and Information School
+affiliation: Wuhan University
+email: ly.wd@whu.edu.cn
+title: Associate Professor
+address: 'Luojia Shan, Wuchang,
+          430072 Wuhan, Hubei, China'
+description: Wuhan University
+google_verification: null
+
+# Handling reading
+safe: true
+encoding: utf-8
+
+
+# File management
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
