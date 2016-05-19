@@ -34,16 +34,18 @@ layout: default
     </ul>
 </div>
 
-<div class="blog">
-    <h1>Useful Links:</h1>
+<div class="project">
+    <h1>Projects:</h1>
     <ul>
-      <li>
-        <a href="/reading_group">Reading Group</a>
-      </li>
+        {% for projects in site.data.projects %}
+        <li>
+            {{ projects.name }}
+        </li>
+        {% endfor %}
     </ul>
 </div>
 
-<!-- <div class="blog">
+<div class="blog">
     <h1>Blog Posts:</h1>
     <ul>
         {% for post in site.posts %}
@@ -52,4 +54,4 @@ layout: default
         </li>
         {% endfor %}
     </ul>
-</div> -->
+</div>
