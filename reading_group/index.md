@@ -6,6 +6,3 @@ layout: reading_group
   - Presenter：张梦磊
   - Title：
 - 2016年5月
-大法师打
-阿斯顿发斯蒂芬
-asfasdf
